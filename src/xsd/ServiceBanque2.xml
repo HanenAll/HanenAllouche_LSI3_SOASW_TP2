@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BanqueService SYSTEM "ServiceBanque.dtd" ><!-- hedha tebaa partie 2 mtaa tp2  -->
+<BanqueService>
+  <conversion>
+    <montant>montant</montant>
+  </conversion>
+  <getCompte>
+    <Compte>
+      <code>code</code>
+      <solde>solde</solde>
+      <dateCreaction>dateCreaction</dateCreaction>
+    </Compte>
+  </getCompte>
+  <getComptes>
+    <Compte>
+      <code>code</code>
+      <solde>solde</solde>
+      <dateCreaction>dateCreaction</dateCreaction>
+    </Compte>
+  </getComptes>
+</BanqueService>

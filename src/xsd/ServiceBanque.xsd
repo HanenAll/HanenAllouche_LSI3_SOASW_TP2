@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ServiceBanque" xmlns:tns="http://www.example.org/ServiceBanque" elementFormDefault="qualified">
+
+<element name="BanqueService">
+     <complexType >
+    	<sequence>
+    		<element name="conversion" type="tns:conversiontype"></element> 
+    		<!-- lorsque le type est personelle on ajoute tns avant le nom du type baad kona najmou n3awdou niktbou complexetype
+    		ama ahna mahabinesh il hiarchie tkoun dekhla barsha donc mchina arafna il type il barra mil element wil tns hiya wasila besh taamil liaison
+    		 yaani timchi tra biha il def mtaa il type hedha  -->
+    		<element name="getCompte" type="tns:getCompteType"></element>
+    		<element name="getComptes" type="tns:getCompteType" minOccurs="1" maxOccurs="unbounded" ></element>
+    	</sequence>
+    </complexType>
+</element>
+<complexType name="conversiontype"><!-- kol complexe type lezim fih dima une seule sequence meme si aandi element wehid ama lezim 
+ naamil sequence -->
+  <sequence>
+    <element name="montant" type="double"></element>
+  </sequence>
+</complexType>
+<complexType name="getCompteType">
+     <sequence>
+        <element name="code" type="string"></element>
+        <element name="solde" type="double"></element>
+        <element name="dateCreation" type="date"></element>
+     </sequence>
+  </complexType>
+</schema>
